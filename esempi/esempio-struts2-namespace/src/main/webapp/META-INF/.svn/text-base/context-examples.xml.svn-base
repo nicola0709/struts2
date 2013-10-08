@@ -1,0 +1,21 @@
+	<Context docBase="WebServiceConciliaCds"
+		path="/WebServiceConciliaCds" reloadable="true">
+		<Resource name="jdbc/ConciliawebInterbase" auth="Container"
+			localDataSource="true" type="javax.sql.DataSource" maxActive="300"
+			maxIdle="30" maxWait="10000" username="******" password="******"
+			driverClassName="org.firebirdsql.jdbc.FBDriver"
+			url="jdbc:firebirdsql:SERVERNAME/3050:c:/conciliawin/database/concilia.fdb"
+			removeAbandoned="true" removeAbandonedTimeout="600" />
+		<Resource name="jdbc/ConciliawebSqlServer" auth="Container"
+			localDataSource="true" type="javax.sql.DataSource" maxActive="300"
+			maxIdle="30" maxWait="10000" username="******" password="******"
+			driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+			url="jdbc:sqlserver://SERVERNAME;instanceName=ISTANZA;databaseName=DATABASE"
+			removeAbandoned="true" removeAbandonedTimeout="600" />
+		<Resource name="jdbc/ConciliawebOracle" auth="Container"
+			localDataSource="true" type="javax.sql.DataSource" maxActive="300"
+			maxIdle="30" maxWait="10000" username="******"
+			password="******" driverClassName="oracle.jdbc.OracleDriver"
+			url="jdbc:oracle:thin:@SERVER:1521:ISTANZA" removeAbandoned="true"
+			removeAbandonedTimeout="600" />
+	</Context>

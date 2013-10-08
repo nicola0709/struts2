@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Layout principale -->
+	<definition name="siteLayout" template="/WEB-INF/pages/template/siteLayout.jsp">
+
+		<put-attribute name="title-base" value="I namespaces!" />
+
+		<put-attribute name="header" value="/WEB-INF/pages/header.jsp" />
+
+		<put-attribute name="body" value="/WEB-INF/pages/homepage.jsp" />
+
+		<put-attribute name="footer" value="/WEB-INF/pages/footer.jsp" />
+
+	</definition>
+
+ 	<definition name="tiles.login" extends="siteLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/pages/login.jsp" />
+	</definition>
+
+	<!-- Definizione della pagina "topolinia" -->
+ 	<definition name="tiles.topolinia" extends="siteLayout">
+		<put-attribute name="title" value="Topolinia" />
+		<put-attribute name="body" value="/WEB-INF/pages/topolinia/homepage.jsp" />
+	</definition>
+
+ 	<definition name="tiles.topolinia.pippo" extends="siteLayout">
+		<put-attribute name="title" value="Pippo" />
+		<put-attribute name="body" value="/WEB-INF/pages/topolinia/pippo.jsp" />
+	</definition>
+
+ 	<definition name="tiles.topolinia.pluto" extends="siteLayout">
+		<put-attribute name="title" value="Pluto" />
+		<put-attribute name="body" value="/WEB-INF/pages/topolinia/pluto.jsp" />
+	</definition>
+
+	<!-- Definizione della pagina "Futurama" -->
+ 	<definition name="tiles.futurama" extends="siteLayout">
+		<put-attribute name="title" value="Futurama" />
+		<put-attribute name="body" value="/WEB-INF/pages/futurama/homepage.jsp" />
+	</definition>
+
+ 	<definition name="tiles.futurama.personaggi" extends="siteLayout">
+		<put-attribute name="title" value="I personaggi di Futurama" />
+		<put-attribute name="body" value="/WEB-INF/pages/futurama/personaggi.jsp" />
+	</definition>
+
+ 	<definition name="tiles.futurama.trama" extends="siteLayout">
+		<put-attribute name="title" value="La trama di Futurama" />
+		<put-attribute name="body" value="/WEB-INF/pages/futurama/trama.jsp" />
+	</definition>
+
+ 	<definition name="tiles.sitemap" extends="siteLayout">
+		<put-attribute name="title" value="Sitemap" />
+		<put-attribute name="body" value="/WEB-INF/pages/sitemap.jsp" />
+	</definition>
+
+</tiles-definitions>
